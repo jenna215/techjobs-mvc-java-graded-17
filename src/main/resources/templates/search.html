@@ -38,11 +38,6 @@
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
-    <div th:if="${jobs.isEmpty()}">
-        No matching jobs found.
-    </div>
-
-    <div th:if="${!jobs.isEmpty()}">
         <table th:each="job : ${jobs}" class="job-listing">
             <tr>
                 <td>ID</td>
@@ -69,7 +64,6 @@
                 <td th:text="${job.coreCompetency}"></td>
             </tr>
         </table>
-    </div>
 
 </div>
 
